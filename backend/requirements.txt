@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymysql
+pydantic[email]
+python-jose[cryptography]
+bcrypt
+python-multipart
+python-dotenv
+colorama
+requests

@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Dynamically mapped slate scale */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+
+  /* Static slate scale for components that should not invert color in dark mode */
+  --color-static-slate-50: hsl(210 40% 98%);
+  --color-static-slate-100: hsl(210 40% 96.1%);
+  --color-static-slate-200: hsl(210 40% 90.1%);
+  --color-static-slate-300: hsl(210 40% 80.1%);
+  --color-static-slate-400: hsl(215.4 16.3% 46.9%);
+  --color-static-slate-500: hsl(215.4 16.3% 56.9%);
+  --color-static-slate-600: hsl(215.4 16.3% 66.9%);
+  --color-static-slate-700: hsl(215.4 16.3% 76.9%);
+  --color-static-slate-800: hsl(215.4 16.3% 86.9%);
+  --color-static-slate-900: hsl(222.2 47.4% 11.2%);
+  --color-static-slate-950: hsl(222.2 84% 4.9%);
+
+  /* Dynamically mapped status highlights */
+  --color-emerald-50: var(--emerald-50);
+  --color-emerald-100: var(--emerald-100);
+  --color-emerald-700: var(--emerald-700);
+
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-700: var(--blue-700);
+
+  --color-indigo-50: var(--indigo-50);
+  --color-indigo-100: var(--indigo-100);
+  --color-indigo-700: var(--indigo-700);
+
+  --color-amber-50: var(--amber-50);
+  --color-amber-100: var(--amber-100);
+  --color-amber-700: var(--amber-700);
+
+  --color-red-50: var(--red-50);
+  --color-red-100: var(--red-100);
+  --color-red-500: var(--red-500);
+
+  /* Static status colors for auth/welcome pages that remain colored in both themes */
+  --color-static-emerald-50: hsl(143 85% 96%);
+  --color-static-emerald-100: hsl(143 85% 90%);
+  --color-static-emerald-700: hsl(143 64% 24%);
+  --color-static-blue-50: hsl(214 100% 97%);
+  --color-static-blue-100: hsl(214 95% 93%);
+  --color-static-blue-700: hsl(214 72% 33%);
+}
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(224 71.4% 4.1%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(224 71.4% 4.1%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(224 71.4% 4.1%);
+
+  --primary: hsl(220.9 39.3% 11%);
+  --primary-foreground: hsl(210 20% 98%);
+
+  --secondary: hsl(220 14.3% 95.9%);
+  --secondary-foreground: hsl(220.9 39.3% 11%);
+
+  --muted: hsl(220 14.3% 95.9%);
+  --muted-foreground: hsl(220 8.9% 46.1%);
+
+  --accent: hsl(220 14.3% 95.9%);
+  --accent-foreground: hsl(220.9 39.3% 11%);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 20% 98%);
+
+  --border: hsl(220 13% 91%);
+  --input: hsl(220 13% 91%);
+  --ring: hsl(262.1 83.3% 57.8%);
+
+  --radius: 0.5rem;
+
+  /* Slate colors - light defaults */
+  --slate-50: hsl(210 40% 98%);
+  --slate-100: hsl(210 40% 96.1%);
+  --slate-200: hsl(210 40% 90.1%);
+  --slate-300: hsl(210 40% 80.1%);
+  --slate-400: hsl(215.4 16.3% 46.9%);
+  --slate-500: hsl(215.4 16.3% 56.9%);
+  --slate-600: hsl(215.4 16.3% 66.9%);
+  --slate-700: hsl(215.4 16.3% 76.9%);
+  --slate-800: hsl(215.4 16.3% 86.9%);
+  --slate-900: hsl(222.2 47.4% 11.2%);
+
+  /* Highlighting variables - light defaults */
+  --emerald-50: hsl(143 85% 96%);
+  --emerald-100: hsl(143 85% 90%);
+  --emerald-700: hsl(143 64% 24%);
+
+  --blue-50: hsl(214 100% 97%);
+  --blue-100: hsl(214 95% 93%);
+  --blue-700: hsl(214 72% 33%);
+
+  --indigo-50: hsl(243 100% 97%);
+  --indigo-100: hsl(243 95% 93%);
+  --indigo-700: hsl(243 75% 42%);
+
+  --amber-50: hsl(48 100% 96%);
+  --amber-100: hsl(48 95% 90%);
+  --amber-700: hsl(38 90% 28%);
+
+  --red-50: hsl(0 100% 97%);
+  --red-100: hsl(0 95% 93%);
+  --red-500: hsl(0 84% 60%);
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+
+  --card: hsl(222.2 47% 9.5%);
+  --card-foreground: hsl(210 40% 98%);
+
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+
+  --primary: hsl(210 40% 98%);
+  --primary-foreground: hsl(222.2 47.4% 11.2%);
+
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+
+  --accent: hsl(217.2 32.6% 17.5%);
+  --accent-foreground: hsl(210 40% 98%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  --border: hsl(222.2 47% 20%);
+  --input: hsl(222.2 47% 20%);
+  --ring: hsl(212.7 26.8% 83.9%);
+
+  /* Slate colors - dark overrides */
+  --slate-50: var(--background);
+  --slate-100: hsl(222.2 47% 18%);
+  --slate-200: hsl(222.2 47% 25%);
+  --slate-300: hsl(222.2 47% 32%);
+  --slate-400: hsl(215 20.2% 55%);
+  --slate-500: hsl(215 20.2% 62%);
+  --slate-600: hsl(215 20.2% 72%);
+  --slate-700: hsl(210 40% 82%);
+  --slate-800: hsl(210 40% 90%);
+  --slate-900: var(--foreground);
+
+  /* Highlighting variables - dark overrides */
+  --emerald-50: hsl(142.5 70% 6% / 90%);
+  --emerald-100: hsl(142.1 76.2% 10%);
+  --emerald-700: hsl(142.5 70% 65%);
+
+  --blue-50: hsl(217.2 90% 6% / 90%);
+  --blue-100: hsl(217.2 91.2% 10%);
+  --blue-700: hsl(217.2 90% 70%);
+
+  --indigo-50: hsl(243.4 80% 6% / 90%);
+  --indigo-100: hsl(243.4 75.2% 10%);
+  --indigo-700: hsl(243.4 80% 75%);
+
+  --amber-50: hsl(38 90% 5% / 90%);
+  --amber-100: hsl(38 90% 9%);
+  --amber-700: hsl(38 90% 65%);
+
+  --red-50: hsl(0 84.2% 5% / 90%);
+  --red-100: hsl(0 84.2% 9%);
+  --red-500: hsl(0 84.2% 65%);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove browser focus outline ring from Recharts SVG wrappers and elements */
+  .recharts-wrapper,
+  .recharts-wrapper *,
+  .recharts-surface,
+  .recharts-surface *,
+  .recharts-responsive-container,
+  .recharts-responsive-container * {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .recharts-wrapper:focus,
+  .recharts-wrapper *:focus,
+  .recharts-surface:focus,
+  .recharts-surface *:focus,
+  .recharts-responsive-container:focus,
+  .recharts-responsive-container *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 transparent;
+  }
+
+  .dark html,
+  html.dark {
+    scrollbar-color: hsl(222.2 47% 18%) transparent;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.02) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.02) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.02) 0px, transparent 50%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.04) 0px, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    color: var(--foreground);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+  }
+
+  /* Custom Webkit Scrollbar — thin pill-style, transparent track */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: hsl(222.2 47% 18%);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: hsl(222.2 47% 26%);
+  }
+
+  /* Hide scrollbar completely on the sidebar nav area */
+  aside::-webkit-scrollbar {
+    width: 0;
+  }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
+  }
+}
+
+/* Timeline/Transitions Utility Animations */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Premium MapLibre styling overrides */
+.maplibregl-ctrl-attrib {
+  background-color: hsla(0, 0%, 100%, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  color: hsl(222.2, 47.4%, 11.2%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 9999px !important;
+  padding: 3px 10px !important;
+  font-size: 10px !important;
+  font-family: inherit !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+}
+
+.maplibregl-ctrl-attrib a {
+  color: hsl(222.2, 47.4%, 11.2%) !important;
+  text-decoration: none !important;
+}
+
+.maplibregl-ctrl-attrib a:hover {
+  text-decoration: underline !important;
+}
+
+.dark .maplibregl-ctrl-attrib {
+  background-color: hsla(222.2, 47%, 9.5%, 0.8) !important;
+  color: hsl(210, 40%, 98%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .maplibregl-ctrl-attrib a {
+  color: hsl(210, 40%, 98%) !important;
+}
+
+/* Hide maplibre default compact icon toggle and clean up borders */
+.maplibregl-ctrl-attrib-button {
+  display: none !important;
+}
+
+.maplibregl-ctrl {
+  margin: 0 8px 8px 0 !important;
+}
+
+.maplibregl-ctrl-group {
+  background: hsla(0, 0%, 100%, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  overflow: hidden !important;
+}
+
+.dark .maplibregl-ctrl-group {
+  background: hsla(222.2, 47%, 9.5%, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.maplibregl-ctrl-group button {
+  width: 32px !important;
+  height: 32px !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.maplibregl-ctrl-group button span {
+  filter: grayscale(1) invert(0);
+}
+
+.dark .maplibregl-ctrl-group button span {
+  filter: grayscale(1) invert(1);
+}
+
+.maplibregl-ctrl-group button:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark .maplibregl-ctrl-group button:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}

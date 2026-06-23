@@ -1,0 +1,33 @@
+# ==========================================
+# Backend-specific .gitignore
+# ==========================================
+
+# Virtual Environments
+venv/
+.venv/
+
+# .env
+# .env.local
+# .env.*.local
+
+
+# Python compiled files and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Keep the uploads directory structure but ignore uploaded assets/images
+uploads/*
+!.gitkeep
+
+# IDEs & Editor Configuration
+.idea/
+.vscode/
+!/.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db

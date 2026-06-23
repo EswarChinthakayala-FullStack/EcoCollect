@@ -1,0 +1,25 @@
+# ==========================================
+# Frontend-specific (Android/Kotlin) .gitignore
+# ==========================================
+
+# Gradle files and cache
+.gradle/
+build/
+
+# Local configuration files (e.g. Android SDK path, local system properties)
+local.properties
+
+# Android studio / IntelliJ IDEA files
+.idea/
+*.iml
+.navigation/
+
+# Output builds
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db

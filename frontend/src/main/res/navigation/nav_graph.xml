@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <!-- Auth Flow -->
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.wastereporting.fragments.OnboardingFragment"
+        android:label="Onboarding" />
+
+    <fragment
+        android:id="@+id/welcomeBackFragment"
+        android:name="com.wastereporting.fragments.WelcomeBackFragment"
+        android:label="Welcome Back" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.wastereporting.fragments.ForgotPasswordFragment"
+        android:label="Forgot Password" />
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.wastereporting.fragments.ResetPasswordFragment"
+        android:label="Reset Password" />
+
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.wastereporting.fragments.CreateAccountFragment"
+        android:label="Create Account" />
+
+    <fragment
+        android:id="@+id/otpVerificationFragment"
+        android:name="com.wastereporting.fragments.OTPVerificationFragment"
+        android:label="OTP Verification" />
+
+    <fragment
+        android:id="@+id/profileSetupFragment"
+        android:name="com.wastereporting.fragments.ProfileSetupFragment"
+        android:label="Profile Setup" />
+
+    <fragment
+        android:id="@+id/enableLocationFragment"
+        android:name="com.wastereporting.fragments.EnableLocationFragment"
+        android:label="Enable Location" />
+
+    <fragment
+        android:id="@+id/stayUpdatedFragment"
+        android:name="com.wastereporting.fragments.StayUpdatedFragment"
+        android:label="Stay Updated" />
+
+    <fragment
+        android:id="@+id/allSetFragment"
+        android:name="com.wastereporting.fragments.AllSetFragment"
+        android:label="All Set" />
+
+    <!-- Citizen Core Tabs -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.wastereporting.fragments.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.wastereporting.fragments.ReportFragment"
+        android:label="Report" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wastereporting.fragments.ProfileFragment"
+        android:label="Profile" />
+
+    <!-- Citizen Sub-pages -->
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.wastereporting.fragments.EditProfileFragment"
+        android:label="Edit Profile" />
+
+    <fragment
+        android:id="@+id/helpSupportFragment"
+        android:name="com.wastereporting.fragments.HelpSupportFragment"
+        android:label="Help and Support" />
+
+    <fragment
+        android:id="@+id/chatSupportFragment"
+        android:name="com.wastereporting.fragments.ChatSupportFragment"
+        android:label="Chat Support" />
+
+    <fragment
+        android:id="@+id/contactSupportFragment"
+        android:name="com.wastereporting.fragments.ContactSupportFragment"
+        android:label="Contact Support" />
+
+    <fragment
+        android:id="@+id/faqDetailsFragment"
+        android:name="com.wastereporting.fragments.FAQDetailsFragment"
+        android:label="FAQ Details" />
+
+    <fragment
+        android:id="@+id/emailSupportFragment"
+        android:name="com.wastereporting.fragments.EmailSupportFragment"
+        android:label="Email Support" />
+
+    <fragment
+        android:id="@+id/emailSubmittedFragment"
+        android:name="com.wastereporting.fragments.EmailSubmittedFragment"
+        android:label="Email Submitted" />
+
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.wastereporting.fragments.AboutAppFragment"
+        android:label="About App" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.wastereporting.fragments.HistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/citizenReportDetailsFragment"
+        android:name="com.wastereporting.fragments.CitizenReportDetailsFragment"
+        android:label="Citizen Report Details" />
+
+    <fragment
+        android:id="@+id/selectCategoryFragment"
+        android:name="com.wastereporting.fragments.SelectCategoryFragment"
+        android:label="Select Category" />
+
+    <fragment
+        android:id="@+id/confirmLocationFragment"
+        android:name="com.wastereporting.fragments.ConfirmLocationFragment"
+        android:label="Confirm Location" />
+
+    <fragment
+        android:id="@+id/reviewReportFragment"
+        android:name="com.wastereporting.fragments.ReviewReportFragment"
+        android:label="Review Report" />
+
+    <fragment
+        android:id="@+id/reportSuccessFragment"
+        android:name="com.wastereporting.fragments.ReportSuccessFragment"
+        android:label="Report Success" />
+
+    <fragment
+        android:id="@+id/cameraCaptureFragment"
+        android:name="com.wastereporting.fragments.CameraCaptureFragment"
+        android:label="Camera Capture" />
+
+    <fragment
+        android:id="@+id/collectionStatusFragment"
+        android:name="com.wastereporting.fragments.CollectionStatusFragment"
+        android:label="Collection Status" />
+
+    <fragment
+        android:id="@+id/liveTrackingFragment"
+        android:name="com.wastereporting.fragments.LiveTrackingFragment"
+        android:label="Live Tracking" />
+
+    <fragment
+        android:id="@+id/collectionSummaryFragment"
+        android:name="com.wastereporting.fragments.CollectionSummaryFragment"
+        android:label="Collection Summary" />
+
+    <!-- Admin Flow -->
+    <fragment
+        android:id="@+id/adminLoginFragment"
+        android:name="com.wastereporting.fragments.AdminLoginFragment"
+        android:label="Admin Login" />
+
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.wastereporting.fragments.AdminDashboardFragment"
+        android:label="Admin Dashboard" />
+
+    <fragment
+        android:id="@+id/adminReportsFragment"
+        android:name="com.wastereporting.fragments.AdminReportsFragment"
+        android:label="Admin Reports" />
+
+    <fragment
+        android:id="@+id/adminReportDetailsFragment"
+        android:name="com.wastereporting.fragments.AdminReportDetailsFragment"
+        android:label="Admin Report Details" />
+
+    <fragment
+        android:id="@+id/adminSupervisorsFragment"
+        android:name="com.wastereporting.fragments.AdminSupervisorsFragment"
+        android:label="Admin Supervisors" />
+
+    <fragment
+        android:id="@+id/adminAddSupervisorFragment"
+        android:name="com.wastereporting.fragments.AdminAddSupervisorFragment"
+        android:label="Admin Add Supervisor" />
+
+    <fragment
+        android:id="@+id/adminSupervisorDetailsFragment"
+        android:name="com.wastereporting.fragments.AdminSupervisorDetailsFragment"
+        android:label="Admin Supervisor Details" />
+
+    <fragment
+        android:id="@+id/adminEditSupervisorFragment"
+        android:name="com.wastereporting.fragments.AdminEditSupervisorFragment"
+        android:label="Admin Edit Supervisor" />
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.wastereporting.fragments.AdminProfileFragment"
+        android:label="Admin Profile" />
+
+    <fragment
+        android:id="@+id/adminEditProfileFragment"
+        android:name="com.wastereporting.fragments.AdminEditProfileFragment"
+        android:label="Admin Edit Profile" />
+
+    <fragment
+        android:id="@+id/adminSettingsFragment"
+        android:name="com.wastereporting.fragments.AdminSettingsFragment"
+        android:label="Admin Settings" />
+
+    <!-- Supervisor Flow -->
+    <fragment
+        android:id="@+id/supervisorLoginFragment"
+        android:name="com.wastereporting.fragments.SupervisorLoginFragment"
+        android:label="Supervisor Login" />
+
+    <fragment
+        android:id="@+id/supervisorDashboardFragment"
+        android:name="com.wastereporting.fragments.SupervisorDashboardFragment"
+        android:label="Supervisor Dashboard" />
+
+    <fragment
+        android:id="@+id/supervisorPendingReportsFragment"
+        android:name="com.wastereporting.fragments.SupervisorPendingReportsFragment"
+        android:label="Supervisor Pending Reports" />
+
+    <fragment
+        android:id="@+id/supervisorCompletedReportsFragment"
+        android:name="com.wastereporting.fragments.SupervisorCompletedReportsFragment"
+        android:label="Supervisor Completed Reports" />
+
+    <fragment
+        android:id="@+id/supervisorProfileFragment"
+        android:name="com.wastereporting.fragments.SupervisorProfileFragment"
+        android:label="Supervisor Profile" />
+
+    <fragment
+        android:id="@+id/supervisorEditProfileFragment"
+        android:name="com.wastereporting.fragments.SupervisorEditProfileFragment"
+        android:label="Supervisor Edit Profile" />
+
+    <fragment
+        android:id="@+id/supervisorReportDetailsFragment"
+        android:name="com.wastereporting.fragments.SupervisorReportDetailsFragment"
+        android:label="Supervisor Report Details" />
+
+    <fragment
+        android:id="@+id/supervisorSettingsFragment"
+        android:name="com.wastereporting.fragments.SupervisorSettingsFragment"
+        android:label="Supervisor Settings" />
+
+    <!-- Shared -->
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.wastereporting.fragments.NotificationsFragment"
+        android:label="Notifications" />
+
+</navigation>

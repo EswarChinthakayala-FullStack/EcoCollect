@@ -1,0 +1,47 @@
+# ==========================================
+# Root .gitignore for EcoCollect Smart Waste
+# ==========================================
+
+# --- Python & Backend ---
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/venv/
+**/.venv/
+# **/.env
+# **/.env.local
+# **/.env.*.local
+
+
+# Keep the backend/uploads directory structure but ignore any uploaded assets
+/backend/uploads/*
+!/backend/uploads/.gitkeep
+
+# --- Node / Web Frontends ---
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/*.local
+
+# --- Android / Kotlin Frontend ---
+**/frontend/.gradle/
+**/frontend/.idea/
+**/frontend/build/
+**/frontend/local.properties
+**/.gradle/
+**/build/
+**/local.properties
+**/*.apk
+**/*.aar
+
+# --- IDE & Editors ---
+**/.idea/
+**/.vscode/
+!**/.vscode/extensions.json
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+**/.DS_Store
+Thumbs.db

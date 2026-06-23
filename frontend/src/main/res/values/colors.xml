@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern Green Eco Theme Colors -->
+    <color name="primary">#22C55E</color>
+    <color name="primary_dark">#15803D</color>
+    <color name="primary_light">#DCFCE7</color>
+    <color name="accent">#3B82F6</color>
+    
+    <!-- Neutral Colors -->
+    <color name="background">#F8FAFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#0F172A</color>
+    <color name="gray_light">#E2E8F0</color>
+    <color name="gray_text">#64748B</color>
+</resources>
